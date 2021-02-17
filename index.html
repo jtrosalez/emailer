@@ -4,21 +4,23 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.js"></script>
 	</head>
-	<div>Please fill in your name below and then click submit to generate your email to send to XXXX.</div>
+	<div>Please fill in your name below and then click the button to generate your email to send to XXXX.</div>
 	<form>
   		<div class="form-group">
-    			<input id="name" class="form-control" type="text" placeholder="Enter your name here...">
+    			<input id="name" class="form-control" type="text" placeholder="Enter your full name here...">
   		</div>
 	</form>
 	<div><button type="button" class="btn btn-primary">Generate Email</button></div>
+	<a id="email" href="mailto:someone@yoursite.com">Email Us</a>
 </html>
 <style>
 	html{padding: 2.5% 2.5% 2.5% 2.5%;}
+	a{display: none;}
 </style>
 <script>
 $( document ).ready(function() {
     $(".btn").click(function(){
-	    alert($("#name").val());
+	    $("#email").trigger("click");
     });
 });
 </script>
