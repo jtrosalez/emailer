@@ -7,7 +7,7 @@
 	<div>Please fill in your name below and then click submit to generate your email to send to XXXX.</div>
 	<form>
   		<div class="form-group">
-    			<input class="form-control" type="text" placeholder="Enter your name here...">
+    			<input id="name" class="form-control" type="text" placeholder="Enter your name here...">
   		</div>
 	</form>
 	<div><button type="button" class="btn btn-primary">Generate Email</button></div>
@@ -18,7 +18,7 @@
 <script>
 $( document ).ready(function() {
     $(".btn").click(function(){
-	    alert($(input).val());
+	    alert($("#name").val());
     });
 });
 </script>
