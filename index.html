@@ -18,7 +18,9 @@
 <script>
 $(document).ready(function() {
 	$("#btn1").click(function(){
-		window.open("mailto:xyz@abc.com?subject=SUBJECT GOES HERE&body=HERE'S THE EMAIL BODY");
+		var name= $("#name").val();
+		var mailto="mailto:xyz@abc.com?subject=SUBJECT GOES HERE&body=My name is " + name + " and I am emailing you about....";
+		window.open(mailto);
 	});
 });
 </script>
