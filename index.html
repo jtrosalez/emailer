@@ -11,17 +11,31 @@
     			<input id="name" class="form-control" type="text" placeholder="Enter your full name here...">
   		</div>
 	</form>
-	<div><button type="button" id="btn1" class="btn btn-primary">Generate Email</button></div>
+	<div><button type="button" id="btn1" class="btn btn-primary">Email 1</button><button type="button" id="btn2" class="btn btn-primary">Email 2</button><button type="button" id="btn3" class="btn btn-primary">Email 3</button></div>
 </html>
 <style>
 	html{padding: 2.5% 2.5% 2.5% 2.5%;}
 </style>
 <script>
 $(document).ready(function() {
-	$("#btn1").click(function(){
+	$(".btn").click(function(){
 		var name= $("#name").val();
-		var mailto="mailto:xyz@abc.com,abc@abc.com?subject=SUBJECT GOES HERE&body=My name is " + name + " and I am emailing you about....";
+		var mailto1="mailto:email1@email.com?subject=SUBJECT GOES HERE&body=Dear Email 1. My name is " + name + " and I am emailing you about....";
+		var mailto2="mailto:email2@email.com?subject=SUBJECT GOES HERE&body=Dear Email 2. My name is " + name + " and I am emailing you about....";
+		var mailto3="mailto:email3@email.com?subject=SUBJECT GOES HERE&body=Dear Email 3. My name is " + name + " and I am emailing you about....";
+		window.open(mailto1);
+		window.open(mailto2);
+		window.open(mailto3);
+	});
+	/*$("#btn2").click(function(){
+		var name= $("#name").val();
+		var mailto="mailto:email2@email.com?subject=SUBJECT GOES HERE&body=Dear Email 2. My name is " + name + " and I am emailing you about....";
 		window.open(mailto);
 	});
+	$("#btn3").click(function(){
+		var name= $("#name").val();
+		var mailto="mailto:email3@email.com?subject=SUBJECT GOES HERE&body=Dear Email 3. My name is " + name + " and I am emailing you about....";
+		window.open(mailto);
+	});*/
 });
 </script>
