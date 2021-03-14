@@ -12,9 +12,8 @@
 	<div>Click a button to send a personalized email to the individuals below:</div>
 	<div>
 	<div id="btns" class="d-flex justify-content-around">
-		<button type="button" id="btn1" class="btn btn-primary mr-1">Email 1</button>
-		<button type="button" id="btn2" class="btn btn-primary mr-1">Email 2</button>
-		<button type="button" id="btn3" class="btn btn-primary mr-1">Email 3</button>
+		<button type="button" id="btn1" class="btn btn-primary mr-1">Eric Garcetti (Mayor of Los Angeles)</button>
+		<button type="button" id="btn2" class="btn btn-primary mr-1">Barbara Ferrer (Los Angeles County Public Health Director)</button>
 	</div>
 	</div>
 	</div>
@@ -28,19 +27,15 @@ $(document).ready(function() {
 	$("#name").change(function(){
 		$("#btnz").show();
 	});
+	var body= 'It has been a year since live entertainment, specifically live stand-up comedy has been made illegal in Los Angeles County. As it currently stands, California has allowed live entertainment. Northern California is allowing live stand-up comedy, San Diego is allowing live stand-up comedy. The entire country has live stand-up comedy. The ONLY PLACE IN THE COUNTRY where live entertainment is still illegal - SPECIFICALLY LIVE STAND-UP COMEDY - is Los Angeles - the entertainment capital of the world. The rules preventing live stand-up comedy are completely arbitrary and capricious and we as citizens demand that you adjust the current city health order to ALLOW live stand up comedy - INDOORS and OUTDOORS. There is no difference sitting 6 feet away from your friends and talking to them versus sitting down 6 feet away from a comedian and listening to them. Your rules have CRUSHED stand-up comedy here in Los Angeles. They make no sense and now that we have indoor dining at 25%, it makes even less sense. WE DEMAND THAT YOU BRING BACK LIVE ENTERTAINMENT. All that has to happen is that the performers have to be 6 feet away from guests. No other adjustments, rules, or regulations need to be made. There is no proof that live entertainment spreads COVID-19. There is no reason that comedy clubs or other restaurants cannot have live stand-up comedy outdoors or INDOORS at this point. Every single restaurant and performance venue knows the rules. They all know how to take care of our guests and staff and keep them safe. Theme parks are supposed to open up in California April 1st and there is STILL no live entertainment. This makes no sense and as citizens we are absolutely sick of your lack of leadership and understanding in this area. We demand that you allow live stand-up comedy, indoors and outdoors, to be legal again in Los Angeles, California.' 
 	$("#btn1").click(function(){
 		var name= $("#name").val();
-		var mailto="mailto:email1@email.com?subject=SUBJECT GOES HERE&body=Dear Email 1. My name is " + name + " and I am emailing you about....";
+		var mailto="mailto:mayor.helpdesk@lacity.org?subject=Live Entertainment in Los Angeles&body=Dear Eric. " + body + " Kind regards " + name;
 		window.open(mailto);
 	});
 	$("#btn2").click(function(){
 		var name= $("#name").val();
-		var mailto="mailto:email2@email.com?subject=SUBJECT GOES HERE&body=Dear Email 2. My name is " + name + " and I am emailing you about....";
-		window.open(mailto);
-	});
-	$("#btn3").click(function(){
-		var name= $("#name").val();
-		var mailto="mailto:email3@email.com?subject=SUBJECT GOES HERE&body=Dear Email 3. My name is " + name + " and I am emailing you about....";
+		var mailto="mailto:bferrer@ph.lacounty.gov?subject=Live Entertainment in Los Angeles&body=Dear Barbara. " + body + " Kind regards " + name;
 		window.open(mailto);
 	});
 });
